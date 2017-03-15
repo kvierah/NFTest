@@ -1,0 +1,68 @@
+---
+execution:
+  scenario: blazemeter-recording
+  concurrency: 10
+  ramp-up: 1m
+  hold-for: 5m
+scenarios:
+  blazemeter-recording:
+    headers:
+      User-Agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+      Accept-Encoding: 'gzip, deflate, sdch, br'
+      Accept-Language: 'es-419,es;q=0.8'
+    requests:
+      - url: 'https://console.cloud.google.com/m/operations'
+        method: GET
+        label: 'https://console.cloud.google.com/m/operations'
+        headers:
+          Accept: 'application/json, text/plain, */*'
+          X-Goog-Request-Log-Data: pagePath=/start
+          x-pan-versionid: aesthetic-discipline-201703101702-rc02
+          X-Chrome-UMA-Enabled: '1'
+          X-Client-Data: CKS1yQEIl7bJAQiltskBCMS2yQEIwpnKAQj7nMoBCKmdygE=
+          Referer: 'https://console.cloud.google.com/start'
+        body:
+          maxResults: '100'
+      - url: 'https://security.bancoagricola.com/cav/'
+        method: GET
+        label: 'https://security.bancoagricola.com/cav/'
+        headers:
+          Upgrade-Insecure-Requests: '1'
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+          Referer: 'https://www.pcbac.com/PotalaPersonal/login.do'
+        body:
+          cat: '1020'
+          title: e-banca 7/24 Personas
+          lang: es
+      - url: 'https://security.bancoagricola.com/cav/'
+        method: GET
+        label: 'https://security.bancoagricola.com/cav/'
+        headers:
+          Upgrade-Insecure-Requests: '1'
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+          Referer: 'https://security.bancoagricola.com/cav/?cat=1020&title=e-banca%207/24%20Personas&lang=es'
+        body:
+          cat: '1100'
+          title: Megamillas
+          lang: es
+      - url: 'https://security.bancoagricola.com/cav/'
+        method: GET
+        label: 'https://security.bancoagricola.com/cav/'
+        headers:
+          Upgrade-Insecure-Requests: '1'
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+          Referer: 'https://security.bancoagricola.com/cav/?cat=1100&title=Megamillas&lang=es'
+        body:
+          cat: '1100'
+          title: Megamillas
+          lang: es
+          stf: 'n#n'
+      - url: 'https://security.bancoagricola.com/cav/'
+        method: GET
+        label: 'https://security.bancoagricola.com/cav/'
+        headers:
+          Upgrade-Insecure-Requests: '1'
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+          Referer: 'https://security.bancoagricola.com/cav/?cat=1100&title=Megamillas&lang=es&stf=n'
+        body:
+          cat: '-6'
